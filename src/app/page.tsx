@@ -52,12 +52,13 @@ export default function Home() {
         data in a database on our backend. Since the system is stateless, the
         next call does not rely on the last. The state is as-is as defined in
         the JWT&apos;s payload. This means previous states—granted they&apos;re
-        not expired—can be &quot;reloaded&quot; and are impossible to
-        invalidate. If we have a service where verifying whether a user is
-        authenticated is too expensive such-is the case when we&apos;re working
-        across multiple microservices, a JWT might be the right choice. Given
-        that JWTs are a flexible technology, they can be used in many different
-        ways and it&apos;s for this reason they are often &quot;misused.&quot;
+        not expired—can be &quot;reloaded&quot; and cannot be invalidated on
+        their own. If we have a service where verifying whether a user is
+        authenticated is too expensive such-is often the case when we&apos;re
+        working across multiple microservices, a JWT might be the right choice.
+        Given that JWTs are a flexible technology, they can be used in many
+        different ways and it&apos;s for this reason they are often
+        &quot;misused.&quot;
       </Paragraph>
       <Paragraph>
         Each time you load this website, a JWT is generated on the server with a
