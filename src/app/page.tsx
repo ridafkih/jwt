@@ -62,8 +62,9 @@ export default function Home() {
       </Paragraph>
       <Paragraph>
         Each time you load this website, a JWT is generated on the server with a
-        payload containing the number of times you&apos;ve visited the website
-        and sent to your browser as a cookie.
+        payload containing the number of times you&apos;ve visited the website.
+        It is then signed to make sure the data has not been tampered with, then
+        sent to your browser as a cookie.
       </Paragraph>
       {oldJwt ? (
         <>
