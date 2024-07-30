@@ -124,14 +124,11 @@ export default function Home() {
         {PAYLOAD}
       </CodeBlock>
       <Paragraph>
-        If you were to attempt to modify the payload, the signature which can
-        only be generated with the private key stored on the server would
-        mismatch with the content, and would be treated as invalid. With this,
-        we can process data and assign it on the server to ensure its integrity
-        while removing the need to store data in our database. Since the data is
-        stored with the user, and not on a database, there&apos;s no need to
-        keep some central store of each user, their session, and number of
-        visits.
+        If you were to attempt to modify the payload, we can detect the
+        signature mismatch and treat it as as invalid. With this, we can process
+        data and ensure its integrity while removing the need to store data in
+        our database. There is no need to keep some central store of each user,
+        their session, and number of visits.
       </Paragraph>
       <Paragraph>
         I personally consider JWTs misused when they are used in a situation
@@ -144,7 +141,7 @@ export default function Home() {
       <Paragraph>
         Below this paragraph, you&apos;ll find a logout button. A particular
         behaviour with JWTs is that unlike a session stored on a centralized
-        server, the session is never invalidated. This means that &quot;logging
+        server, the JWT is validuntil it expires. This means that &quot;logging
         out&quot; does nothing more than throw away the JWT on the client. Since
         this website does nothing to version or expire the JWT, you could save
         and reuse the JWT after you logout, or reload a previous session state
