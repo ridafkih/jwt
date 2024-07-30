@@ -157,6 +157,18 @@ export default function Home() {
         Upon clicking the above button, you&apos;ll send a request to an
         endpoint that will clear the cookie, and redirect you back to this page.
       </Paragraph>
+      <Paragraph>
+        <span className="relative">
+          <a
+            className="text-blue-500 tracking-tight before:[content:'—'] before:absolute before:-translate-x-full before:-left-1"
+            href="https://rida.dev"
+          >
+            <span className="underline underline-offset-2">
+              Rida F&apos;kih
+            </span>
+          </a>
+        </span>
+      </Paragraph>
     </main>
   );
 }
